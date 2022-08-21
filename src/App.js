@@ -1,8 +1,10 @@
+import PostsList from "./features/posts/PostsList";
+
 function App() {
   return (
-    <div>
-      app
-    </div>
+    <main>
+      <PostsList />
+    </main>
   );
 }
 
