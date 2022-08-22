@@ -5,14 +5,16 @@ import { selectAllPosts } from "../../redux/postsSlice";
 import PostAuthor from "../../components/PostAuthor/PostAuthor";
 import TimeAgo from "../../components/TimeAgo";
 import ReactionButtons from "../../components/ReactionButtons";
+import DeleteButton from "../../components/DeleteButton/DeleteButton";
 
 const PostsList = () => {
     const posts = useSelector(selectAllPosts);
-
+    
     const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
 
     const renderedPosts = orderedPosts.map(post => (
         <article key={post.id}>
+            <DeleteButton id={post.id} />
             <h3>{post.title}</h3>
             <p>{post.comment.substring(0, 100)}</p>
             <PostAuthor userId={post.userId} />

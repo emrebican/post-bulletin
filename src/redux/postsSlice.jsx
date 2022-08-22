@@ -64,11 +64,14 @@ const postsSlice = createSlice({
             if (existingPost) {
                 existingPost.reactions[reaction]++
             }
+        },
+        postDeleted: (state, action) => {
+            return state.filter(post => post.id !== action.payload);
         }
     }
 });
 
-export const { postAdded, reactionAdded } = postsSlice.actions;
+export const { postAdded, reactionAdded, postDeleted } = postsSlice.actions;
 export default postsSlice.reducer;
 
 export const selectAllPosts = (state) => state.posts;

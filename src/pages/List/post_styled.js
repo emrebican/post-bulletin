@@ -6,8 +6,9 @@ export const Section = styled.section`
     align-items: center;
     gap: 1.2rem;
     padding: 1rem 2rem;
-
+    
     article {
+        position: relative;
         width: 50%;
         border: 2px solid #29b6f6;
         border-radius: 5px;
