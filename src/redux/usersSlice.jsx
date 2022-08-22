@@ -9,12 +9,9 @@ const initialState = [
 const usersSlice = createSlice({
     name: "users",
     initialState,
-    reducers: {
-
-    }
+    reducers: {}
 });
 
-// export const { } = usersSlice.actions;
 export default usersSlice.reducer;
 
 export const selectAllUsers = (state) => state.users;

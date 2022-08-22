@@ -1,7 +1,9 @@
+import { Section } from "./post_styled";
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "../../redux/postsSlice";
+
 import PostAuthor from "../../components/PostAuthor/PostAuthor";
-import { Section } from "./post_styled";
+import TimeAgo from "../../components/TimeAgo";
 
 const PostsList = () => {
     const posts = useSelector(selectAllPosts);
@@ -11,6 +13,7 @@ const PostsList = () => {
             <h3>{post.title}</h3>
             <p>{post.comment.substring(0, 100)}</p>
             <PostAuthor userId={post.userId} />
+            <TimeAgo timestamp={post.date} />
         </article>
     ))
 
