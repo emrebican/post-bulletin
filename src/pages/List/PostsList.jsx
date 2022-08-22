@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "../../redux/postsSlice";
+import PostAuthor from "../../components/PostAuthor/PostAuthor";
 import { Section } from "./post_styled";
 
 const PostsList = () => {
@@ -9,6 +10,7 @@ const PostsList = () => {
         <article key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.comment.substring(0, 100)}</p>
+            <PostAuthor userId={post.userId} />
         </article>
     ))
 

@@ -59,6 +59,15 @@ export const Section = styled.section`
                 box-shadow: 0px 0px 4px #212121;
             }
         }
+
+        select {
+            border: none;
+            color: #212121;
+            font-size: 1rem;
+            height: 1.6rem;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
     }
 
     .deactive {
