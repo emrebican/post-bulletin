@@ -11,25 +11,25 @@ const AddPostForm = () => {
     const users = useSelector(selectAllUsers);
 
     const [title, setTitle] = useState('');
-    const [comment, setComment] = useState('');
+    const [body, setBody] = useState('');
     const [userId, setUserId] = useState('');
 
     const onChangeTitle = e => setTitle(e.target.value);
-    const onChangeComment = e => setComment(e.target.value);
+    const onChangeBody = e => setBody(e.target.value);
     const onChangeAuthor = e => setUserId(e.target.value);
 
-    const canSave = Boolean(title) && Boolean(comment) && Boolean(userId);
+    const canSave = Boolean(title) && Boolean(body) && Boolean(userId);
 
     // Submit
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (title.trim() && comment.trim()) {
-            dispatch(postAdded(title, comment, userId))
+        if (title.trim() && body.trim()) {
+            dispatch(postAdded(title, body, userId))
         }
 
         setTitle('');
-        setComment('');
+        setBody('');
         setUserId('');
     }
 
@@ -63,9 +63,9 @@ const AddPostForm = () => {
                 <textarea
                     type="text"
                     required
-                    name="comment"
-                    value={comment}
-                    onChange={onChangeComment}
+                    name="body"
+                    value={body}
+                    onChange={onChangeBody}
                 />
                 <button
                     disabled={!canSave}

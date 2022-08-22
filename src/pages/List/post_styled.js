@@ -7,7 +7,7 @@ export const Section = styled.section`
     gap: 1.2rem;
     padding: 1rem 2rem;
     
-    article {
+/*     article {
         position: relative;
         width: 50%;
         border: 2px solid #29b6f6;
@@ -47,7 +47,7 @@ export const Section = styled.section`
                 }
             }
         }
-    }
+    } */
 
     h2 {
         width: 15%  ;
