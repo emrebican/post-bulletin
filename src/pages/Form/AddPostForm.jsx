@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
+import { Section } from './form_sytled';
 import { useDispatch } from "react-redux";
 
-import { postAdded } from './postsSlice';
+import { postAdded } from '../../redux/posts/postsSlice';
 
 const AddPostForm = () => {
 
@@ -41,7 +42,7 @@ const AddPostForm = () => {
     }
 
     return (
-        <section>
+        <Section>
             <h2>Add a New Post</h2>
             <form onSubmit={handleSubmit}>
                 <label>Post Title:</label>
@@ -53,7 +54,7 @@ const AddPostForm = () => {
                     onChange={handleChange}
                 />
                 <label>Post Comment:</label>
-                <input
+                <textarea
                     type="text"
                     required
                     name="comment"
@@ -62,7 +63,7 @@ const AddPostForm = () => {
                 />
                 <button>Save Post</button>
             </form>
-        </section>
+        </Section>
     )
 }
 

@@ -4,15 +4,15 @@ export const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .8rem;
+    gap: 1.2rem;
     padding: 1rem 2rem;
 
     article {
         width: 50%;
         border: 2px solid #29b6f6;
-        border-radius: 10px;
-        padding: .5rem 2rem;
-        box-shadow: inset 0px 0px 10px black;
+        border-radius: 5px;
+        padding: .8rem 2rem;
+        box-shadow: 5px 3px 10px #000;
         background-color: #29b6f6;
         color: #eee;
 

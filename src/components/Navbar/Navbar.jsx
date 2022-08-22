@@ -1,11 +1,12 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { Nav } from "./navbar_styled";
 
 const Navbar = () => {
     return (
-        <nav>
+        <Nav>
             <NavLink to="/form">Form</NavLink>
             <NavLink to="/">List</NavLink>
-        </nav>
+        </Nav>
     )
 }
 

@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-import PostsList from "./features/posts/PostsList";
-import AddPostForm from "./features/posts/AddPostForm";
+import PostsList from "./pages/List/PostsList";
+import AddPostForm from "./pages/Form/AddPostForm";
 
 function App() {
   return (
