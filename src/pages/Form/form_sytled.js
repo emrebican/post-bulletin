@@ -60,4 +60,14 @@ export const Section = styled.section`
             }
         }
     }
+
+    .deactive {
+        background-color: #aaa;
+        &:hover {
+            background-color: #aaa;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
 `;
