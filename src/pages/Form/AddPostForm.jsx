@@ -3,7 +3,7 @@ import { nanoid } from "@reduxjs/toolkit";
 import { Section } from './form_sytled';
 import { useDispatch } from "react-redux";
 
-import { postAdded } from '../../redux/posts/postsSlice';
+import { postAdded } from '../../redux/postsSlice';
 
 const AddPostForm = () => {
 

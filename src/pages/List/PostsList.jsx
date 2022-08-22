@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectAllPosts } from "../../redux/posts/postsSlice";
+import { selectAllPosts } from "../../redux/postsSlice";
 import { Section } from "./post_styled";
 
 const PostsList = () => {
