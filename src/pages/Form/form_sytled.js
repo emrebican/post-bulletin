@@ -13,6 +13,7 @@ export const Section = styled.section`
         flex-direction: column;
         width: 40%;
         background-color: #29b6f6;
+        box-shadow: 5px 5px 5px black;
         margin: 2rem auto;
         padding: 3rem 4rem;
         border-radius: 4px;
@@ -37,7 +38,8 @@ export const Section = styled.section`
 
         textarea {
             height: 10rem;
-            padding: 1rem
+            padding: 1rem;
+            font-family: 'Roboto', sans-serif;
         }
 
         button {

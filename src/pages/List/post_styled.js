@@ -24,6 +24,26 @@ export const Section = styled.section`
         p{
             color: #ddd;
         }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+            margin-bottom: -10px;
+
+            button {
+                background-color: transparent;
+                border: none;
+                padding-right: 10px;
+                font-size: .9rem;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
 
     h2 {
