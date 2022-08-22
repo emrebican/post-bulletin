@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { nanoid } from "@reduxjs/toolkit";
 import { Section } from './form_sytled';
 import { useDispatch } from "react-redux";
 
@@ -19,10 +18,10 @@ const AddPostForm = () => {
         e.preventDefault();
 
         if (input.title.trim() && input.comment.trim()) {
-            dispatch(postAdded({
-                id: nanoid(),
-                ...input
-            }))
+            dispatch(postAdded(
+                input.title,
+                input.comment
+            ))
         }
 
         setInput({
