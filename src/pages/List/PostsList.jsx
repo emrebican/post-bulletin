@@ -1,5 +1,6 @@
 import { Section } from "./post_styled";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { selectAllPosts } from "../../redux/postsSlice";
 
 import PostAuthor from "../../components/PostAuthor/PostAuthor";
@@ -9,7 +10,7 @@ import DeleteButton from "../../components/DeleteButton/DeleteButton";
 
 const PostsList = () => {
     const posts = useSelector(selectAllPosts);
-    
+
     const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
 
     const renderedPosts = orderedPosts.map(post => (
