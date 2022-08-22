@@ -38,6 +38,8 @@ export const Section = styled.section`
                 border: none;
                 padding-right: 10px;
                 font-size: .9rem;
+                font-weight: bolder;
+                color: #424242;
                 cursor: pointer;
 
                 &:active {
