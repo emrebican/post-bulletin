@@ -43,12 +43,21 @@ const initialState = {
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
     try {
         const response = await axios.get(POST_URL);
-        
+
         return [...response.data];
     } catch (err) {
         return err.message;
     }
 });
+
+export const addNewPost = createAsyncThunk("posts/addNewPost", async (initialPost) => {
+    try {
+        const response = await axios.post(POST_URL, initialPost);
+        return response.data;
+    } catch (err) {
+        return err.message;
+    }
+})
 
 const postsSlice = createSlice({
     name: "posts",
