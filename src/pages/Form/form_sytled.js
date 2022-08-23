@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-    margin: 4rem 0;
+    height: 86.6vh;
 
     h2 {
         text-align: center;
         color: #eee;
+        margin-top: 4rem;
     }
 
     form {
